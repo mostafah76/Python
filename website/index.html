@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PyCurated — The Best of Python</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a class="nav-brand" href="#">
+        <span class="brand-icon">🐍</span>
+        <span class="brand-text">PyCurated</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#topics">Topics</a></li>
+        <li><a href="#resources">Resources</a></li>
+        <li><a href="#tools">Tools</a></li>
+        <li><a href="#notebooks">Notebooks</a></li>
+        <li><a href="#newsletter" class="btn-nav">Subscribe</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">Curated for Python Developers</div>
+      <h1 class="hero-title">
+        The Best of<br />
+        <span class="gradient-text">Python Programming</span>
+      </h1>
+      <p class="hero-subtitle">
+        Hand-picked tutorials, libraries, tools, and resources to level up your Python skills — from beginner to expert.
+      </p>
+      <div class="hero-actions">
+        <a href="#resources" class="btn btn-primary">Explore Resources</a>
+        <a href="#notebooks" class="btn btn-outline">View Notebooks</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">200+</span><span class="stat-label">Resources</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">50+</span><span class="stat-label">Libraries</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">30+</span><span class="stat-label">Topics</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="code-card">
+        <div class="code-header">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="code-filename">example.py</span>
+        </div>
+        <pre class="code-body"><code><span class="kw">import</span> pandas <span class="kw">as</span> pd
+<span class="kw">import</span> numpy <span class="kw">as</span> np
+
+<span class="com"># Load your data</span>
+df = pd.read_csv(<span class="str">"data.csv"</span>)
+
+<span class="com"># Vectorized operations</span>
+result = np.sqrt(df[<span class="str">"values"</span>] ** 2)
+
+<span class="kw">print</span>(result.describe())</code></pre>
+      </div>
+    </div>
+  </header>
+
+  <!-- TOPICS -->
+  <section class="section" id="topics">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Browse by Topic</h2>
+        <p class="section-subtitle">Find exactly what you need</p>
+      </div>
+      <div class="topics-grid">
+        <a class="topic-card" href="#resources" data-filter="data">
+          <div class="topic-icon">📊</div>
+          <h3>Data Science</h3>
+          <p>Pandas, NumPy, data wrangling</p>
+          <span class="topic-count">42 resources</span>
+        </a>
+        <a class="topic-card" href="#resources" data-filter="ml">
+          <div class="topic-icon">🤖</div>
+          <h3>Machine Learning</h3>
+          <p>Scikit-learn, model building</p>
+          <span class="topic-count">38 resources</span>
+        </a>
+        <a class="topic-card" href="#resources" data-filter="viz">
+          <div class="topic-icon">📈</div>
+          <h3>Visualization</h3>
+          <p>Matplotlib, Seaborn, Plotly</p>
+          <span class="topic-count">29 resources</span>
+        </a>
+        <a class="topic-card" href="#resources" data-filter="web">
+          <div class="topic-icon">🌐</div>
+          <h3>Web Development</h3>
+          <p>Flask, FastAPI, Django</p>
+          <span class="topic-count">35 resources</span>
+        </a>
+        <a class="topic-card" href="#resources" data-filter="automation">
+          <div class="topic-icon">⚙️</div>
+          <h3>Automation</h3>
+          <p>Scripts, bots, workflows</p>
+          <span class="topic-count">24 resources</span>
+        </a>
+        <a class="topic-card" href="#resources" data-filter="core">
+          <div class="topic-icon">🧱</div>
+          <h3>Core Python</h3>
+          <p>OOP, decorators, generators</p>
+          <span class="topic-count">31 resources</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED RESOURCES -->
+  <section class="section section-alt" id="resources">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Featured Resources</h2>
+        <p class="section-subtitle">Carefully selected for quality and impact</p>
+      </div>
+      <div class="filter-bar">
+        <button class="filter-btn active" data-tag="all">All</button>
+        <button class="filter-btn" data-tag="tutorial">Tutorial</button>
+        <button class="filter-btn" data-tag="library">Library</button>
+        <button class="filter-btn" data-tag="course">Course</button>
+        <button class="filter-btn" data-tag="article">Article</button>
+      </div>
+      <div class="resources-grid" id="resourcesGrid">
+
+        <article class="resource-card" data-tags="tutorial data">
+          <div class="resource-meta">
+            <span class="tag tag-tutorial">Tutorial</span>
+            <span class="resource-level level-beginner">Beginner</span>
+          </div>
+          <h3>Pandas Fundamentals</h3>
+          <p>Master DataFrame operations, groupby, merging, and data cleaning with real-world examples.</p>
+          <div class="resource-footer">
+            <span class="resource-icon">📊</span>
+            <span class="resource-topic">Data Science</span>
+            <a href="#" class="resource-link">Read &rarr;</a>
+          </div>
+        </article>
+
+        <article class="resource-card" data-tags="library data">
+          <div class="resource-meta">
+            <span class="tag tag-library">Library</span>
+            <span class="resource-level level-intermediate">Intermediate</span>
+          </div>
+          <h3>NumPy Vectorization</h3>
+          <p>Speed up numerical computations with vectorized operations — ditch Python loops forever.</p>
+          <div class="resource-footer">
+            <span class="resource-icon">⚡</span>
+            <span class="resource-topic">Performance</span>
+            <a href="#" class="resource-link">Read &rarr;</a>
+          </div>
+        </article>
+
+        <article class="resource-card" data-tags="article core">
+          <div class="resource-meta">
+            <span class="tag tag-article">Article</span>
+            <span class="resource-level level-intermediate">Intermediate</span>
+          </div>
+          <h3>Python Decorators Explained</h3>
+          <p>Understand closures, higher-order functions and write elegant reusable decorators.</p>
+          <div class="resource-footer">
+            <span class="resource-icon">🧱</span>
+            <span class="resource-topic">Core Python</span>
+            <a href="#" class="resource-link">Read &rarr;</a>
+          </div>
+        </article>
+
+        <article class="resource-card" data-tags="course ml">
+          <div class="resource-meta">
+            <span class="tag tag-course">Course</span>
+            <span class="resource-level level-intermediate">Intermediate</span>
+          </div>
+          <h3>Scikit-learn Crash Course</h3>
+          <p>Build classification, regression, and clustering models using the most popular ML library.</p>
+          <div class="resource-footer">
+            <span class="resource-icon">🤖</span>
+            <span class="resource-topic">Machine Learning</span>
+            <a href="#" class="resource-link">Read &rarr;</a>
+          </div>
+        </article>
+
+        <article class="resource-card" data-tags="tutorial viz">
+          <div class="resource-meta">
+            <span class="tag tag-tutorial">Tutorial</span>
+            <span class="resource-level level-beginner">Beginner</span>
+          </div>
+          <h3>Data Visualization with Matplotlib</h3>
+          <p>Create beautiful charts, heatmaps and publication-ready plots in minutes.</p>
+          <div class="resource-footer">
+            <span class="resource-icon">📈</span>
+            <span class="resource-topic">Visualization</span>
+            <a href="#" class="resource-link">Read &rarr;</a>
+          </div>
+        </article>
+
+        <article class="resource-card" data-tags="library web">
+          <div class="resource-meta">
+            <span class="tag tag-library">Library</span>
+            <span class="resource-level level-advanced">Advanced</span>
+          </div>
+          <h3>FastAPI Deep Dive</h3>
+          <p>Build blazing-fast REST APIs with automatic docs, type safety and async support.</p>
+          <div class="resource-footer">
+            <span class="resource-icon">🌐</span>
+            <span class="resource-topic">Web Dev</span>
+            <a href="#" class="resource-link">Read &rarr;</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TOOLS -->
+  <section class="section" id="tools">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Essential Tools</h2>
+        <p class="section-subtitle">Every Python developer should know these</p>
+      </div>
+      <div class="tools-grid">
+        <div class="tool-card">
+          <div class="tool-logo">🐼</div>
+          <h3>Pandas</h3>
+          <p>Powerful data manipulation and analysis library.</p>
+          <div class="tool-tags"><span>Data</span><span>Analysis</span></div>
+        </div>
+        <div class="tool-card">
+          <div class="tool-logo">🔢</div>
+          <h3>NumPy</h3>
+          <p>Fundamental package for scientific computing.</p>
+          <div class="tool-tags"><span>Math</span><span>Arrays</span></div>
+        </div>
+        <div class="tool-card">
+          <div class="tool-logo">📉</div>
+          <h3>Matplotlib</h3>
+          <p>Comprehensive library for creating static visualizations.</p>
+          <div class="tool-tags"><span>Plots</span><span>Charts</span></div>
+        </div>
+        <div class="tool-card">
+          <div class="tool-logo">🤗</div>
+          <h3>Scikit-learn</h3>
+          <p>Simple and efficient tools for machine learning.</p>
+          <div class="tool-tags"><span>ML</span><span>Models</span></div>
+        </div>
+        <div class="tool-card">
+          <div class="tool-logo">⚡</div>
+          <h3>FastAPI</h3>
+          <p>Modern, fast web framework for building APIs.</p>
+          <div class="tool-tags"><span>Web</span><span>API</span></div>
+        </div>
+        <div class="tool-card">
+          <div class="tool-logo">📓</div>
+          <h3>Jupyter</h3>
+          <p>Interactive notebooks for data exploration and sharing.</p>
+          <div class="tool-tags"><span>Notebooks</span><span>Explore</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOTEBOOKS SHOWCASE -->
+  <section class="section section-alt" id="notebooks">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Featured Notebooks</h2>
+        <p class="section-subtitle">Interactive examples from this repository</p>
+      </div>
+      <div class="notebooks-grid">
+        <div class="notebook-card">
+          <div class="notebook-header">
+            <span class="notebook-icon">📓</span>
+            <div>
+              <h3>More on Pandas Functions</h3>
+              <span class="notebook-type">Jupyter Notebook</span>
+            </div>
+          </div>
+          <p>Deep dive into advanced Pandas functions — aggregations, window functions, apply, and more with practical examples.</p>
+          <div class="notebook-tags">
+            <span>Pandas</span>
+            <span>Data Analysis</span>
+            <span>Python</span>
+          </div>
+          <a href="More on Pandas functions.ipynb" class="btn btn-sm">Open Notebook</a>
+        </div>
+        <div class="notebook-card">
+          <div class="notebook-header">
+            <span class="notebook-icon">📓</span>
+            <div>
+              <h3>Vectorization &amp; Element-wise Matrix Ops</h3>
+              <span class="notebook-type">Jupyter Notebook</span>
+            </div>
+          </div>
+          <p>Explore NumPy vectorization and element-wise matrix operations for high-performance numerical computing.</p>
+          <div class="notebook-tags">
+            <span>NumPy</span>
+            <span>Vectorization</span>
+            <span>Performance</span>
+          </div>
+          <a href="vectorization  element wise matrix .ipynb" class="btn btn-sm">Open Notebook</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="section newsletter-section" id="newsletter">
+    <div class="container">
+      <div class="newsletter-box">
+        <div class="newsletter-content">
+          <h2>Stay Updated</h2>
+          <p>Get the best Python resources delivered to your inbox weekly. No spam, ever.</p>
+        </div>
+        <form class="newsletter-form" onsubmit="handleSubscribe(event)">
+          <input type="email" placeholder="your@email.com" required class="newsletter-input" />
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+        <div class="newsletter-success" id="newsletterSuccess" style="display:none;">
+          Thanks for subscribing! Check your inbox.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="nav-brand">
+            <span class="brand-icon">🐍</span>
+            <span class="brand-text">PyCurated</span>
+          </a>
+          <p>The best hand-picked Python resources for every skill level.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Topics</h4>
+          <ul>
+            <li><a href="#topics">Data Science</a></li>
+            <li><a href="#topics">Machine Learning</a></li>
+            <li><a href="#topics">Web Development</a></li>
+            <li><a href="#topics">Automation</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#resources">Tutorials</a></li>
+            <li><a href="#resources">Libraries</a></li>
+            <li><a href="#resources">Courses</a></li>
+            <li><a href="#notebooks">Notebooks</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>About</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Submit Resource</a></li>
+            <li><a href="#">Newsletter</a></li>
+            <li><a href="#">GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 PyCurated. Built with Python &amp; love.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
